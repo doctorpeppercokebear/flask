@@ -9,12 +9,16 @@
     <form method="post">
         <input type="number" name="number1" step="any" placeholder="first number" required>
         <input type="number" name="number2" step="any" placeholder="second number" required>
-        <select>
+        <select name="operation">
             <option value="add">Add</option>
             <option value="subtract">Subtract</option>
+            <option value="multiplication">multiplication</option>
+            <option value="devide">devide</option>
         </select>
         <button type="submit">Calculate</button>
     </form>
-
+    {% if result is not none %}
+    <h2>Result: {{ result }}</h2>
+    {% endif %}
 </body>
 </html>
